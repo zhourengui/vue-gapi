@@ -1,5 +1,5 @@
 declare module 'vue-gapi' {
-  import { App } from 'vue'
+  import { App, Ref } from 'vue'
 
   export interface LoginResponse {
     hasGrantedScopes: boolean // True if the requested scopes were granted.
@@ -80,7 +80,7 @@ declare module 'vue-gapi' {
   }
 
   export default VueGapiPlugin
-  export function useGapi(): VueGapi
+  export function useGapi(): Ref<VueGapi>
   export const version: string
 
   module '@vue/runtime-core' {

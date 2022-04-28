@@ -1,4 +1,4 @@
-import { inject } from 'vue'
+import { inject, ref } from 'vue'
 import { injectKey } from './consts'
 import GapiClientProvider from './GapiClientProvider'
 import GoogleAuthService from './GoogleAuthService'
@@ -39,7 +39,7 @@ export default {
      * @member {GoogleAuthService}
      */
     app.config.globalProperties.$gapi = gapi
-    app.provide(injectKey, gapi)
+    app.provide(injectKey, ref(gapi))
   },
 }
 
